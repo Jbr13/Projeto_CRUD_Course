@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+							                                Modelagem BD
+-----------------------------------------------------------------------------------------------------------------------------------
+
+-- Customer
+	
+	id                   numerico    auto_increment
+	name                 texto       255    Requerido
+	email                texto       255    Único, Requerido
+	telefone             texto       255
+	nomeUsuário          texto       255    Único, Requerido
+	senha                texto       255    Requerido
+
+-- Course
+	
+	name             	 texto       255    Requerido
+	description          texto       1000   Requerido
+	workload             texto       255    Requerido
+
+-- Matricula
+
+	nameCourse             texto       255    Requerido
+	description            texto       1000   Requerido
+	workload               texto       255    Requerido
+	

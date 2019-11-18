@@ -1,0 +1,108 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                       PROJETO CRUD WKF
+-----------------------------------------------------------------------------------------------------------------------------------
+
+-- To do
+	
+
+
+
+-- In Progress
+
+
+
+
+-- Done
+	
+	Mapear CRUD WKF
+    Conexão BD
+
+
+
+
+														  ATRIBUTOS
+														  ---------
+
+CRUD baseado no Workfinity que irá contemplar as mesmas funcionalidades.
+CRUD: CREATE > READ > UPDATE > DELETE
+
+CRUD escolhido: Cliente
+
+Versões utilizadas:
+
+	Grails: 2.2.4
+	Java: 7 
+
+Estrutura a ser criada com base no WKF {
+	
+	Início {
+	
+		Filtros	para pesquisa	// Desejavel
+
+		Pesquisar (cadastros existentes) {   // Essencial
+			
+			Total: <totalNumeroRegistros>	// Essencial
+			Números de registros que serão apresentados: <25, 50, 100>	// Desejavel
+			
+			Grids: <PréVisualizaçãoCadastrosInseridos> {	// Essencial
+				Show: <visualizarAtributosEmNovoGrid> {		// Essencial
+					Edit: <editarAtributosNoGridDeVisualização>		// Essencial
+					Delete: <deletarRegistro>		// Essencial
+					Back> <voltarParaPesquisa>		// Essencial
+	
+				}
+			}
+
+			Páginação: <numeroDePagsContendoCadastros>		// Essencial
+
+		}
+
+		Novo (cadastrar) {		// Essencial
+
+			Novo Cliente: <atributosCadastroNovoCliente>	// Essencial
+			Back: <voltarTelaInicial>	// Essencial
+			Create: <criarClienteEmQuestão>	// Essencial
+
+		}
+
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                               ETC
+-----------------------------------------------------------------------------------------------------------------------------------
+
+ESTRUTURA BASE CRUD WKF {
+	
+	Início {
+	
+		Filtros
+
+		Pesquisar (cadastros existentes) {
+			
+			Total: <totalNumeroRegistros>
+			Números de registros que serão apresentados: <25, 50, 100>
+			
+			Grids: <PréVisualizaçãoCadastrosInseridos> {
+				Show: <visualizarAtributosEmNovoGrid> {
+					Edit: <editarAtributosNoGridDeVisualização>	
+					Delete: <deletarRegistro>
+					Back> <voltarParaPesquisa>
+	
+				}
+			}
+
+			Páginação: <numeroDePagsContendoCadastros>
+
+		}
+
+		Novo (cadastrar) {
+
+			Novo Cliente: <atributosCadastroNovoCliente>
+			Back: <voltarTelaInicial>
+			Create: <criarClienteEmQuestão>
+
+		}
+
+	}
+}
