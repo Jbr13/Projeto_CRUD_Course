@@ -2,24 +2,30 @@
 							                                Modelagem BD
 -----------------------------------------------------------------------------------------------------------------------------------
 
--- Customer
+-- Student
 	
-	id                   numerico    auto_increment
-	name                 texto       255    Requerido
-	email                texto       255    Único, Requerido
-	telefone             texto       255
-	nomeUsuário          texto       255    Único, Requerido
-	senha                texto       255    Requerido
+	id                   numerico    AUTOINCREMENT PRIMARY KEY
+	name                 texto       255    NOT NULL
+	email                texto       255    UNIQUE, NOT NULL
+	telephone            texto       255	NULL
+	userName          	 texto       255    UNIQUE, NOT NULL
+	password             texto       255    NOT NULL
+	nameCourseEnrolled	 texto       255    NULL	
 
 -- Course
 	
-	name             	 texto       255    Requerido
-	description          texto       1000   Requerido
-	workload             texto       255    Requerido
+	id					 numerico    AUTOINCREMENT PRIMARY KEY
+	name             	 texto       255    NOT NULL
+	description          texto       1000   NOT NULL
+	workload             texto       255    NOT NULL
+	enrolled			 texto 		 255	NULL
 
--- Matricula
+-- Registration
 
-	nameCourse             texto       255    Requerido
-	description            texto       1000   Requerido
-	workload               texto       255    Requerido
+	id					 numerico    AUTOINCREMENT PRIMARY KEY
+	userName_id            ->	     course.id
+	description_id         ->		 course.id
+	workload_id			   ->		 course.id
+    enrolled_id			   -> 		 course.id
+
 	
