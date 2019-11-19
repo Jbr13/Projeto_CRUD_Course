@@ -2,16 +2,14 @@ package projeto_crud_course
 
 class Registration {
 
-    String nameCourse_id
-    String description_id
-    String workload_id
-    String enrolled_id
+    Student student
+    Course course
 
     static constraints = {
 
-        static mapping = {
-            table name:
-        }
+    }
 
+    static mapping = {
+        version(false)
     }
 }

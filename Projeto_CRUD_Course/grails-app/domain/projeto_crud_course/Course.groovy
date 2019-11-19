@@ -5,8 +5,15 @@ class Course {
     String name
     String description
     String workload
-    String enrolled
+
+    static hasMany = [registration: Registration]
+    // static belongsTo = [Registration]
 
     static constraints = {
+
+    }
+
+    static mapping = {
+        version(false)
     }
 }

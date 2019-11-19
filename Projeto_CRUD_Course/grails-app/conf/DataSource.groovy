@@ -22,7 +22,7 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "create-drop"
             url = "jdbc:mysql://localhost/projetoCRUD"
             username = "root"
             password = "root.."
@@ -30,7 +30,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "create-drop"
             url = "jdbc:mysql://localhost/projetoCRUD"
             username = "root"
             password = "root.."

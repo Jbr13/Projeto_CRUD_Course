@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------
 
 -- To do
-	
+	https://www.youtube.com/watch?v=CMT-iywSJXs&list=PLTLAlheiUm5HY5M1SV97d8Ubppyyxy3G2&index=10
 
 
 
@@ -16,9 +16,7 @@
 	
 	Mapear CRUD WKF
     Conexão BD
-
-
-
+	Config BD
 
 														  ATRIBUTOS
 														  ---------
@@ -35,17 +33,17 @@ Versões utilizadas:
 
 Estrutura a ser criada com base no WKF {
 	
-	Início {
+	Registration {
 	
 		Filtros	para pesquisa	// Desejavel
 
-		Pesquisar (cadastros existentes) {   // Essencial
+		Pesquisar Course | Student  {   // Essencial
 			
 			Total: <totalNumeroRegistros>	// Essencial
 			Números de registros que serão apresentados: <25, 50, 100>	// Desejavel
 			
-			Grids: <PréVisualizaçãoCadastrosInseridos> {	// Essencial
-				Show: <visualizarAtributosEmNovoGrid> {		// Essencial
+			Grids: <Pré Visualização Course | Student Inseridos> {	// Essencial
+				Show: <visualizarAtributosEmNovoGridDoCourse> {		// Essencial
 					Edit: <editarAtributosNoGridDeVisualização>		// Essencial
 					Delete: <deletarRegistro>		// Essencial
 					Back> <voltarParaPesquisa>		// Essencial
@@ -57,13 +55,20 @@ Estrutura a ser criada com base no WKF {
 
 		}
 
-		Novo (cadastrar) {		// Essencial
+			Novo Course {		// Essencial
 
-			Novo Cliente: <atributosCadastroNovoCliente>	// Essencial
-			Back: <voltarTelaInicial>	// Essencial
-			Create: <criarClienteEmQuestão>	// Essencial
+				Novo Course: <atributosCadastroNovoCourse>	// Essencial
+				Back: <voltarTelaInicial>	// Essencial
+				Create: <criarClienteEmQuestão>	// Essencial
 
-		}
+			}
+			Novo Student {		// Essencial
+
+				Novo Student: <atributosCadastroNovoStudent>	// Essencial
+				Back: <voltarTelaInicial>	// Essencial
+				Create: <criarClienteEmQuestão>	// Essencial
+
+			}
 
 	}
 }
@@ -106,3 +111,48 @@ ESTRUTURA BASE CRUD WKF {
 
 	}
 }
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                      	DROP
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+desc course;
+desc student;
+desc registration;
+
+SELECT * FROM student;
+SELECT * FROM course;
+SELECT * FROM registration;
+
+
+INSERT INTO 
+	student 
+	(course_id, email, name, status, telephone) 
+VALUES
+	(1, "joao@joao.com", "Maria Barcella", "Não Matriculado", "1998989898");
+    
+INSERT INTO 
+	course 
+	(description, name, workload) 
+VALUES
+	("Curso de HMTL 5 descrito", "HTML5", "10 horas");
+    
+INSERT INTO 
+	registration 
+	(student_id, course_id) 
+VALUES
+	(3, 1);  
+    
+SELECT 
+	s.name,
+    s.status,
+    c.name,
+    c.workload
+FROM 
+	student s
+JOIN
+	course c
+    ON s.course_id = c.id 
+    And s.status = "Matriculado";
