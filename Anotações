@@ -117,7 +117,6 @@ ESTRUTURA BASE CRUD WKF {
                                                       	DROP
 -----------------------------------------------------------------------------------------------------------------------------------
 
-
 desc course;
 desc student;
 desc registration;
@@ -126,12 +125,11 @@ SELECT * FROM student;
 SELECT * FROM course;
 SELECT * FROM registration;
 
-
 INSERT INTO 
 	student 
 	(course_id, email, name, status, telephone) 
 VALUES
-	(1, "joao@joao.com", "Maria Barcella", "Não Matriculado", "1998989898");
+	(1, "maria@joao.com", "Maria Barcella", "Registered", "1998989898");
     
 INSERT INTO 
 	course 
@@ -143,7 +141,7 @@ INSERT INTO
 	registration 
 	(student_id, course_id) 
 VALUES
-	(3, 1);  
+	(2, 1);  
     
 SELECT 
 	s.name,
@@ -155,4 +153,4 @@ FROM
 JOIN
 	course c
     ON s.course_id = c.id 
-    And s.status = "Matriculado";
+    And s.status = "Registered";

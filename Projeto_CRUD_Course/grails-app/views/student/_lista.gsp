@@ -1,27 +1,34 @@
-<table>
+<g:if test="${studentsList?.size() > 0}">
 
-    <tr>
-        <th>Nome:</th>
-        <th>Email:</th>
-        <th>Telephone:</th>
-        <th>Course:</th>
-        <th>Status:</th>
-    </tr>
-
-    <g:each var="student" in="${student}">
+    <table>
 
         <tr>
-            <th>${student.name}</th>
-            <th>${student.email}</th>
-            <th>${student.telephone}</th>
-            <th>${student.course}</th>
-            <th>${student.status}</th>
-
-            <td>
-                <a href="#">Alterar</a>
-                <a href="#">Excluir</a>
-            </td>
+            <th>Nome:</th>
+            <th>Email:</th>
+            <th>Telephone:</th>
+            <th>Course:</th>
+            <th>Status:</th>
         </tr>
 
-    </g:each>
-</table>
+        <g:each var="studentsInstance" in="${studentsList}">
+
+            <tr>
+                <th>${studentsInstance?.name}</th>
+                <th>${studentsInstance?.email}</th>
+                <th>${studentsInstance?.telephone}</th>
+                <th>${studentsInstance?.course}</th>
+                <th>${studentsInstance?.status}</th>
+
+                <td>
+                    <g:remoteLink controller="student" action="edit" update="divForm" id="${studentsInstance.id}">Edit</g:remoteLink>
+                    &nbsp;
+                    <a href="#" onclick="deleteStudent('${studentsInstance.id}')">Delete</a>
+                </td>
+            </tr>
+
+        </g:each>
+    </table>
+</g:if>
+<g:else>
+    Nao ha estudantes cadastrados.
+</g:else>

@@ -7,7 +7,6 @@ class Course {
     String workload
 
     static hasMany = [registration: Registration]
-    // static belongsTo = [Registration]
 
     static constraints = {
 

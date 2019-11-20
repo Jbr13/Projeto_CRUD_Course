@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Projeto_CRUD_Course dev" uuid="4e6441a0-1e11-4b23-afd8-fe6b32621795">
+    <database-info product="MySQL" version="5.5.62" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="projetoCRUD"/>
+    <table name="course" schema="" catalog="projetoCRUD" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="workload" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FKAF83E8B975E85688" table="registration" schema="" catalog="projetoCRUD" columns="course_id"/>
+      <exported-key name="FK8FFE823B75E85688" table="student" schema="" catalog="projetoCRUD" columns="course_id"/>
+    </table>
+    <table name="registration" schema="" catalog="projetoCRUD" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="course_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="student_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FKAF83E8B975E85688" columns="course_id" ref-table="course" ref-schema="" ref-catalog="projetoCRUD" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FKAF83E8B9CC023AEC" columns="student_id" ref-table="student" ref-schema="" ref-catalog="projetoCRUD" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FKAF83E8B9CC023AEC" unique="false" columns="student_id"/>
+      <index name="FKAF83E8B975E85688" unique="false" columns="course_id"/>
+    </table>
+    <table name="student" schema="" catalog="projetoCRUD" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="course_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12"/>
+      <column name="telephone" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK8FFE823B75E85688" columns="course_id" ref-table="course" ref-schema="" ref-catalog="projetoCRUD" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FKAF83E8B9CC023AEC" table="registration" schema="" catalog="projetoCRUD" columns="student_id"/>
+      <index name="email" unique="true" columns="email"/>
+      <index name="FK8FFE823B75E85688" unique="false" columns="course_id"/>
+    </table>
+  </data-source>
+</component>
