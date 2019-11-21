@@ -20,9 +20,12 @@
                 <th>${studentsInstance?.status}</th>
 
                 <td>
-                    <g:remoteLink controller="student" action="edit" update="divForm" id="${studentsInstance.id}">Edit</g:remoteLink>
+                    <g:remoteLink controller="student" action="edit" update="divForm"
+                                  id="${studentsInstance.id}">Edit</g:remoteLink>
                     &nbsp;
-                    <a href="#" onclick="deleteStudent('${studentsInstance.id}')">Delete</a>
+                    <g:remoteLink controller="student" action="delete" update="divLista"
+                                  id="${studentsInstance.id}">Delete</g:remoteLink>
+                    %{--<a href="#" onclick="deleteStudent(${studentsInstance.id})">Delete</a>   Responsavel por chamar a funçao js de confirmaçao de exclusao--}%
                 </td>
             </tr>
 

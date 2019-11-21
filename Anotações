@@ -15,11 +15,11 @@
 -- Done
 	
 	Mapear CRUD WKF
-    Conexão BD
+    	Conexão BD
 	Config BD
 
-														  ATRIBUTOS
-														  ---------
+							  ATRIBUTOS
+							  ---------
 
 CRUD baseado no Workfinity que irá contemplar as mesmas funcionalidades.
 CRUD: CREATE > READ > UPDATE > DELETE
@@ -114,7 +114,7 @@ ESTRUTURA BASE CRUD WKF {
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
-                                                      	DROP
+                                                      	SQL
 -----------------------------------------------------------------------------------------------------------------------------------
 
 desc course;

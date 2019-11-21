@@ -1,4 +1,4 @@
-<%@ page import="projeto_crud_course.Student" %>
+<%@ page import="projeto_crud_course.Student" %> %{--Importando classe de dominio Student--}%
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,15 +13,15 @@
 
         }
 
-        function deleteStudent(id) {
+        /* function deleteStudent(id) {         Funçao que envia msg de confirmaçao da exclusao
 
             if (confirm("Deseja relamente excluir esse registro?")) {
 
-                <g:remoteFunction controller="student" action="delete" update="divLista" id="'+id+'"/>  %{--Definindo o id na sintaxer jquery, dessa forma ira chamar o delete passando uma variavel--}%
+                %{--<g:remoteFunction controller="student" action="delete" update="divLista" id="${id}"/>--}%
 
             }
 
-        }
+        } */
 
     </script>
 
@@ -29,10 +29,12 @@
 
 <body>
 
-<g:remoteLink controller="student" action="add" update="divForm">Add</g:remoteLink>
+    <g:remoteLink controller="student" action="add" update="divForm">Add</g:remoteLink>
 
 <div id="divLista">
+
     <g:render template="lista" model="[studentsInstance: studentsList]"></g:render>
+
 </div>
 
 <div id="divForm"></div>
