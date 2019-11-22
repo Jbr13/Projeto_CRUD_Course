@@ -36,8 +36,8 @@ class StudentController {
         newStudentSave.telephone = params.telephone
         newStudentSave.course = params.course
         newStudentSave.status = params.status
-
         newStudentSave.validate()
+
         if (!newStudentSave.hasErrors()) {
 
             newStudentSave.save(flush: true)

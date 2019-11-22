@@ -37,7 +37,7 @@ html * {
 }
 
 body {
-	background: #ffffff;
+	background-color: orangered;
 	color: #333333;
 	margin: 0 auto;
 	max-width: 960px;
@@ -47,8 +47,18 @@ body {
 	        box-shadow: 0 0 0.3em #255b17;
 }
 
-#grailsLogo {
-	background-color: #abbf78;
+#myLogo {
+	background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+#myLogo img {
+
+    position: relative;
+    max-width: 50%;
+    max-height: 50%;
+    left: 20%;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -65,7 +75,9 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #FFFFFF;
+    position: relative;
+    left: 6%;
 }
 
 a:hover, a:active {
@@ -89,11 +101,6 @@ img {
 
 /* GENERAL */
 
-#grailsLogo a {
-	display: inline-block;
-	margin: 1em;
-}
-
 .content {
 }
 
@@ -108,7 +115,8 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+
+	background: black;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -172,7 +180,7 @@ img {
 }
 
 .nav a:focus, .nav a:hover {
-	background-color: #999999;
+	background-color: #992812;
 	color: #ffffff;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);

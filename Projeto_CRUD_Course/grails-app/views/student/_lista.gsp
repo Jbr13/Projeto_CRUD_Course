@@ -1,4 +1,7 @@
 <g:if test="${studentsList?.size() > 0}">
+    <head>
+        <link rel="stylesheet" href="/css/lista.css">
+    </head>
 
     <table>
 
