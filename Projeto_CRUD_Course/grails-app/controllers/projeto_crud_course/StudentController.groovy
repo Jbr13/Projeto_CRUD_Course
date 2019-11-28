@@ -6,7 +6,7 @@ class StudentController {
 
         def lista = Student.list()
 
-        render(view: "/student/index", model: [studentsList: lista])
+        render(view: "/student/indexStudent", model: [studentsList: lista])
 
     }
 
@@ -54,7 +54,8 @@ class StudentController {
     def listStudents() {
 
         def listStudents = Student.list()
-        render(template: "lista", model: [studentsList: listStudents])
+        render(template: "listStudent", model: [studentsList: listStudents])
+
 
     }
 
@@ -71,7 +72,7 @@ class StudentController {
         student.delete(flush: true)
 
         def lista = Student.list()
-        render (template: "lista", model: [student: lista])
+        render (template: "listStudent", model: [student: lista])
 
     }
 
