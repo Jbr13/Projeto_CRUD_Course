@@ -4,7 +4,7 @@
 </div>
 
 <div class="formStudentLayout">
-        <g:formRemote name="registrationFormStudent" url="[controller: 'student', action: 'save']" update="divMensagem"
+        <g:formRemote name="registrationFormStudent" url="[controller: 'student', action: 'save']" update="modalBody"
         onSuccess="loadList()">
 
                 Nome: <input type="text" name="name" value="${studentAdd?.name}"/> <br />

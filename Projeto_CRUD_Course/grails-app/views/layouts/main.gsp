@@ -19,16 +19,42 @@
 </head>
 
 <body>
-<div id="myLogo" role="banner">
-    <a href="https://www.behance.net/joaovitorc13d8">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a1d7e078745459.5caddfa42efdf.png" alt="Jbr13"/>
-    </a>
-</div>
-<g:layoutBody/>
-<div class="footer" role="contentinfo"></div>
 
-<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-<g:javascript library="application"/>
-<r:layoutResources/>
+<div id="menuHeader">
+
+    <h1>CRUD</h1>
+
+</div>
+
+<h2>Matricula</h2>
+
+<div id="divModalList">
+
+    <div id="headerModalIndex" role="banner">
+
+        <h3>Filtros</h3>
+
+    </div>
+
+    <g:layoutBody/>
+
+    <tr>
+        <th>
+
+        </th>
+    </tr>
+
+    <div id="footerModalIndex" role="banner">
+
+    </div>
+
+</div>
+
+<div class="footer" role="contentinfo">
+
+    <h4>Version 1.0.0</h4>
+
+</div>
+
 </body>
 </html>

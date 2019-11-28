@@ -56,7 +56,6 @@ class StudentController {
         def listStudents = Student.list()
         render(template: "listStudent", model: [studentsList: listStudents])
 
-
     }
 
     def edit() {

@@ -1,7 +1,4 @@
 <g:if test="${studentsList?.size() > 0}">
-    <head>
-        <link rel="stylesheet" href="/css/lista.css">
-    </head>
 
     <table>
 
@@ -23,10 +20,10 @@
                 <th>${studentsInstance?.status}</th>
 
                 <td>
-                    <g:remoteLink controller="student" action="edit" update="divLista"
+                    <g:remoteLink controller="student" action="edit" update="divModalList"
                                   id="${studentsInstance.id}">Edit</g:remoteLink>
                     &nbsp;
-                    <g:remoteLink controller="student" action="delete" update="divLista"
+                    <g:remoteLink controller="student" action="delete" update="divModalList"
                                   id="${studentsInstance.id}">Delete</g:remoteLink>
                 </td>
             </tr>
@@ -35,5 +32,5 @@
     </table>
 </g:if>
 <g:else>
-    Nao ha estudantes cadastrados.
+    <h5>Nao ha estudantes cadastrados.<h5>
 </g:else>

@@ -12,11 +12,11 @@ class Student {
 
     static constraints = {
 
-        status inList: ["Registered", "Unregistered"]
+        // status inList: ["Registered", "Unregistered"]
 
         name nullable: false, blank: false;
         status nullable: false, blank: false;
-        email email: true, unique: true;
+        // email email: true, unique: true;
         course nullable: true, blank: true;
 
     }

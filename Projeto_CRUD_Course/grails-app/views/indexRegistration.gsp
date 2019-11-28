@@ -7,60 +7,36 @@
     <g:javascript library="jquery"/>
 
     <style type="text/css" media="screen">
-    #page-body {
-        background-color: #000000;
-        border: .1em solid #fff;
-        margin: 2em 2em 1em;
+    #modalBody {
+        border: 2px black;
+        margin: 0 auto;
         padding: 1em;
-        border-radius: 0.6em;
-        height: 30%;
+        border-radius: 0.2em;
+        min-height: 30%;
     }
 
     .ie6 #status {
         display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
     }
 
-    #page-body ul {
+    #modalBody h1 {
         font-size: 0.9em;
-        list-style-type: none;
-        margin-bottom: 0.6em;
-        padding: 0;
     }
 
-    #page-body li {
+    #modalBody li {
         line-height: 1.3;
     }
 
-    #page-body h1 {
+    #modalBody h1 {
         text-transform: uppercase;
         font-size: 1.1em;
     }
 
-    #page-body {
-        margin: 5%;
-    }
-
-    h1 {
-        color: white;
-    }
-
-    h2 {
-        margin-top: 1em;
-        margin-bottom: 0.3em;
-        font-size: 1em;
-        color: white;
-    }
-
-    p {
-        line-height: 1.5;
-        margin: 0.25em 0;
-    }
-
-    #controller-list ul {
+    #btnRegister ul {
         list-style-position: inside;
     }
 
-    #controller-list li {
+    #btnRegister li {
         line-height: 1.3;
         list-style-position: inside;
         margin: 0.25em 0;
@@ -71,13 +47,10 @@
             display: none;
         }
 
-        #page-body {
-            margin: 0 1em 1em;
-        }
-
-        #page-body h1 {
+        #modalBody h1 {
             margin-top: 0;
         }
+
     }
     </style>
 
@@ -85,7 +58,7 @@
 
         function loadList() {
 
-            <g:remoteFunction controller="student" action="listStudents" update="divLista"/>
+            <g:remoteFunction controller="student" action="listStudents" update="modalBody"/>
 
         }
 
@@ -95,30 +68,26 @@
 
 <body>
 
-<div id="page-body" role="main">
-    <h1>Matricula</h1>
+<div class="contentsModal">
 
-    <g:remoteLink controller="student" action="listStudents" update="divLista">Listar Alunos</g:remoteLink>
+    <g:remoteLink controller="student" action="listStudents" update="modalBody">Listar Alunos</g:remoteLink>
 
-
-    <div id="divLista">
-
+    <div id="modalBody" role="main">
         <ul>
 
         </ul>
-
     </div>
 
-    <div id="controller-list" role="navigation">
+    <div id="btnRegister" role="navigation">
         <ul>
 
-            <g:remoteLink controller="student" action="add" update="page-body">Cadastro de alunos</g:remoteLink>
+            <g:remoteLink controller="student" action="add" update="modalBody">Cadastro de alunos</g:remoteLink>
             <br>
-            <g:remoteLink controller="student" action="add" update="page-body">Cadastro de Cursos</g:remoteLink>
+            %{--<g:remoteLink controller="student" action="addCursos" update="modalBody">Cadastro de Cursos</g:remoteLink>--}%
 
         </ul>
     </div>
-</div>
 
+</div>
 </body>
 </html>
