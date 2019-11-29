@@ -46,10 +46,6 @@
         margin: 0 0 0 2%;
     }
 
-    #btnRegistrationStudent {
-        margin: 0 0 2% 2%;
-    }
-
     </style>
 
     <script type="text/javascript">

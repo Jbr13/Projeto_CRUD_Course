@@ -440,8 +440,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 1em;
-    background-color: #efefef;
+    background-color: white;
 }
 
 tr {

@@ -15,7 +15,7 @@
         <div class="formPart01">
             Nome: <input type="text" name="name" value="${studentAdd?.name}"/> <br/>
             Email: <input type="text" name="email" value="${studentAdd?.email}"/> <br/>
-            Tel: <input type="text" name="telephone" value="${studentAdd?.telephone}"/> <br/>
+            Telefone: <input type="text" name="telephone" value="${studentAdd?.telephone}"/> <br/>
         </div>
 
         <div class="formPart02">
