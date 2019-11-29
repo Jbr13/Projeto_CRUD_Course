@@ -46,6 +46,56 @@
         margin: 0 0 0 2%;
     }
 
+    /*MODAL REGISTRO DE ESTUDANTES*/
+
+    #bgModalRegisterStudent {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.8);
+        position: fixed;
+        display: none;
+    }
+
+    #bgModalRegisterStudent:target {
+        display: block;
+    }
+
+    #bgModalRegisterStudent:target ~ .modalRegisterStundent{
+        top: 150px;
+        transition: all .3s;
+        transition-delay: .2s;
+    }
+
+    .modalRegisterStundent {
+        width: 720px;
+        height: 405px;
+        position: absolute;
+        margin-left: -360px;
+        left: 50%;
+        background-color: white;
+    }
+
+    #btnCloseModalRegisterStudent {
+
+        color: #FFFFFF;
+        font-family: arial, helvetica, verdana, sans-serif;
+        text-decoration: none;
+        font-size: 35px;
+        position: absolute;
+        background-color: black;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        right: 0;
+
+    }
+
+    #btnCloseModalRegisterStudent:hover {
+        opacity: .6;
+    }
+
     </style>
 
     <script type="text/javascript">
@@ -79,5 +129,14 @@
     </div>
 
 </div>
+<a href="#bgModalRegisterStudent">TESTE</a>
+<div id="bgModalRegisterStudent"></div>
+
+<div class="modalRegisterStundent">
+
+    <a href="#" id="btnCloseModalRegisterStudent">X</a>
+
+</div>
+
 </body>
 </html>
