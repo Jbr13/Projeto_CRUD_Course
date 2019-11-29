@@ -42,16 +42,14 @@
         margin: 0.25em 0;
     }
 
-    @media screen and (max-width: 480px) {
-        #status {
-            display: none;
-        }
-
-        #modalBody h1 {
-            margin-top: 0;
-        }
-
+    #btnListStudent {
+        margin: 0 0 0 2%;
     }
+
+    #btnRegistrationStudent {
+        margin: 0 0 2% 2%;
+    }
+
     </style>
 
     <script type="text/javascript">
@@ -70,20 +68,16 @@
 
 <div class="contentsModal">
 
-    <g:remoteLink controller="student" action="listStudents" update="modalBody">Listar Alunos</g:remoteLink>
+    <button id="btnListStudent">
+        <g:remoteLink controller="student" action="listStudents" update="modalBody">Listar</g:remoteLink>
+    </button>
+
+    <button id="btnRegistrationStudent">
+        <g:remoteLink controller="student" action="add" update="modalBody">Novo Aluno</g:remoteLink>
+    </button>
 
     <div id="modalBody" role="main">
         <ul>
-
-        </ul>
-    </div>
-
-    <div id="btnRegister" role="navigation">
-        <ul>
-
-            <g:remoteLink controller="student" action="add" update="modalBody">Cadastro de alunos</g:remoteLink>
-            <br>
-            %{--<g:remoteLink controller="student" action="addCursos" update="modalBody">Cadastro de Cursos</g:remoteLink>--}%
 
         </ul>
     </div>

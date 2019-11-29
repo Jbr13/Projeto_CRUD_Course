@@ -17,7 +17,7 @@
 
             if (confirm("Deseja realmente excluir esse registro?")) {
 
-                <g:remoteFunction controller="student" action="delete" update="divLista" id="${id}"/>
+                <g:remoteFunction controller="student" action="deleteStudent" update="divLista" id="${id}"/>
 
             }
 
@@ -33,7 +33,7 @@
 
 <g:if test="${studentsList?.size() > 0}">
     <head>
-        <link rel="stylesheet" href="/css/lista.css">
+        <link rel="stylesheet" href="/css/formStudent.css">
     </head>
 
     <table>
@@ -56,10 +56,10 @@
                 <th>${studentsInstance?.status}</th>
 
                 <td>
-                    <g:remoteLink controller="student" action="edit" update="divForm"
+                    <g:remoteLink controller="student" action="editStudent" update="divForm"
                                   id="${studentsInstance.id}">Edit</g:remoteLink>
                     &nbsp;
-                    <g:remoteLink controller="student" action="delete" update="divLista"
+                    <g:remoteLink controller="student" action="deleteStudent" update="divLista"
                                   id="${studentsInstance.id}">Delete</g:remoteLink>
                 </td>
             </tr>

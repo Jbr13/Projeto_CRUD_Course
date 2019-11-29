@@ -4,7 +4,7 @@ class StudentController {
 
     def index() {
 
-        def lista = Student.list()
+        List lista = Student.list()
 
         render(view: "/student/indexStudent", model: [studentsList: lista])
 
@@ -14,7 +14,7 @@ class StudentController {
 
         Student newStudent = new Student()
 
-        render(template: "/student/form", model: [studentAdd: newStudent])
+        render(template: "/student/formStudent", model: [studentAdd: newStudent])
     }
 
     def save() {
@@ -53,25 +53,25 @@ class StudentController {
 
     def listStudents() {
 
-        def listStudents = Student.list()
+        List listStudents = Student.list()
         render(template: "listStudent", model: [studentsList: listStudents])
 
     }
 
-    def edit() {
+    def editStudent() {
 
         Student student = Student.get(params.id)
-        render(template: "form", model: [studentAdd: student])
+        render(template: "/student/formStudent", model: [studentAdd: student])
 
     }
 
-    def delete() {
+    def deleteStudent(Long id) {
 
-        Student student = Student.get(params.id as Long)
+        Student student = Student.get(id)
         student.delete(flush: true)
 
-        def lista = Student.list()
-        render (template: "listStudent", model: [student: lista])
+        List studentlist = Student.list()
+        render (template: "listStudent", model: [studentsList: studentlist])
 
     }
 

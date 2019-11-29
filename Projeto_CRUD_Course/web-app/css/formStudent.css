@@ -1,0 +1,12 @@
+.formStudentLayout {
+
+    display: grid;
+    /*border: 1px solid black;*/
+    grid-template-columns: 200px 200px;
+
+}
+
+input {
+    margin: 1.5%;
+}
+

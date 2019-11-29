@@ -20,10 +20,10 @@
                 <th>${studentsInstance?.status}</th>
 
                 <td>
-                    <g:remoteLink controller="student" action="edit" update="divModalList"
+                    <g:remoteLink controller="student" action="editStudent" update="modalBody"
                                   id="${studentsInstance.id}">Edit</g:remoteLink>
                     &nbsp;
-                    <g:remoteLink controller="student" action="delete" update="divModalList"
+                    <g:remoteLink controller="student" action="deleteStudent" update="modalBody"
                                   id="${studentsInstance.id}">Delete</g:remoteLink>
                 </td>
             </tr>

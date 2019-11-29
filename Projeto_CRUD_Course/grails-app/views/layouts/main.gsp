@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
     <g:layoutHead/>
     <r:layoutResources/>
 </head>
@@ -22,7 +23,9 @@
 
 <div id="menuHeader">
 
-    <h1>CRUD</h1>
+    <ul>
+        %{--<li>MENU</li>--}%
+    </ul>
 
 </div>
 
@@ -44,13 +47,13 @@
         </th>
     </tr>
 
-    <div id="footerModalIndex" role="banner">
+    %{--<div id="footerModalIndex" role="banner">--}%
 
-    </div>
+    %{--</div>--}%
 
 </div>
 
-<div class="footer" role="contentinfo">
+<div class="footerIndex" role="contentinfo">
 
     <h4>Version 1.0.0</h4>
 
