@@ -24,7 +24,7 @@
         </div>
 
         <input type="submit" name="btnSave" value="Save"/>
-        <input type="button" name="btnCancel" value="Cancel"/>
+        <input type="submit" name="btnCancel" value="Cancel" formaction="listStudent"/>
         <input type="hidden" name="id" value="${studentAdd?.id}">
 
     </g:formRemote>
