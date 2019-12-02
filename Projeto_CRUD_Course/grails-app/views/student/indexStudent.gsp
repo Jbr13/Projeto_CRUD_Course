@@ -29,7 +29,7 @@
 
 <body>
 
-<g:remoteLink controller="student" action="add" update="divForm">Add</g:remoteLink>
+<g:remoteLink controller="student" action="addStudent" update="divForm">Add</g:remoteLink>
 
 <g:if test="${studentsList?.size() > 0}">
     <head>

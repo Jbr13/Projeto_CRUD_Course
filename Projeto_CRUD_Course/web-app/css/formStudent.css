@@ -1,10 +1,12 @@
 .formStudentLayout {
 
     display: grid;
-    /*border: 1px solid black;*/
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 
 }
+
+
 
 input {
     margin: 1.5%;

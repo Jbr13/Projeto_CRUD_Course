@@ -10,7 +10,7 @@ class StudentController {
 
     }
 
-    def add() {
+    def addStudent() {
 
         Student newStudent = new Student()
 
