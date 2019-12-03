@@ -71,10 +71,13 @@
     .modalRegisterStundent {
         width: 720px;
         height: 405px;
-        position: absolute;
-        left: 30%;
-        top: 30%;
+        margin: 0 auto;
         background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
     }
 
     #btnCloseModalRegisterStudent {
@@ -103,13 +106,13 @@
         margin: 0 auto;
         padding: 1em;
         border-radius: 0.2em;
-        min-height: 30%;
+        min-height: 80%;
 
     }
 
     .modalRegisterStundent button {
 
-        margin: 2% 0 0 2%;
+        margin: 2%;
 
 
     }
@@ -178,6 +181,8 @@
         <a href="#" id="btnCloseModalRegisterStudent">X</a>
 
     </div>
+
+
 
 </div>
 
